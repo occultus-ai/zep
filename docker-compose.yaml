@@ -59,7 +59,7 @@ services:
       - ZEP_STORE_TYPE=postgres
     build:
       context: .
-      dockerfile: Dockerfile.postgres
+      dockerfile: Dockerfile.cloud
     healthcheck:
       test: timeout 10s bash -c ':> /dev/tcp/127.0.0.1/8000' || exit 1
       interval: 5s
