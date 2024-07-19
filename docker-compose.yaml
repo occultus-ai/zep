@@ -55,8 +55,8 @@ services:
       - ZEP_EXTRACTORS_MESSAGES_EMBEDDINGS_DIMENSIONS=1536
       - ZEP_EXTRACTORS_MESSAGES_SUMMARIZER_EMBEDDINGS_SERVICE=openai
       - ZEP_EXTRACTORS_MESSAGES_SUMMARIZER_EMBEDDINGS_DIMENSIONS=1536
-      - ZEP_OPENAI_API_KEY=${ZEP_OPENAI_API_KEY}
-      - ZEP_STORE_TYPE=postgres
+    env_file:
+      - .env
     build:
       context: .
       dockerfile: Dockerfile.cloud
