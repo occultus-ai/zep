@@ -68,6 +68,8 @@ services:
       start_period: 40s
     networks:
       - zep-network
+    entrypoint: [ "/bin/sh" ]
+    command: [ "-c", "ls -l /app" ]
 networks:
   zep-network:
     driver: bridge
