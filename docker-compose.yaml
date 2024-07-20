@@ -45,7 +45,7 @@ services:
     ports:
       - "8008:8000"
     volumes:
-      - zep-config:/app/config.yaml
+      - ./:/app
     environment:
       - ZEP_STORE_POSTGRES_DSN=postgres://postgres:postgres@db:5432/postgres?sslmode=disable
       - ZEP_NLP_SERVER_URL=http://nlp:5557
@@ -73,4 +73,3 @@ networks:
     driver: bridge
 volumes:
   zep-db:
-  zep-config:
